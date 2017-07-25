@@ -18,7 +18,7 @@ ENV['RACK_ENV'] = 'test'
 # require our Sinatra app file
 require File.join(File.dirname(__FILE__), '../app', 'app.rb')
 
-require './app/models/link'
+require './app/app'
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
