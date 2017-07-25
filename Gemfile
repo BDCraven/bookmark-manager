@@ -4,6 +4,7 @@ source "https://rubygems.org"
  gem 'data_mapper'
  gem 'database_cleaner'
  gem 'dm-postgres-adapter'
+ gem 'rake'
  gem 'sinatra'
 
 group :test do
