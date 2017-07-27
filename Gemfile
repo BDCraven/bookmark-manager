@@ -7,6 +7,7 @@ source "https://rubygems.org"
  gem 'dm-postgres-adapter'
  gem 'rake'
  gem 'sinatra'
+ gem 'sinatra-flash'
 
 group :test do
   gem 'capybara'
