@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 source "https://rubygems.org"
 
+ gem 'bcrypt'
  gem 'data_mapper'
  gem 'database_cleaner'
  gem 'dm-postgres-adapter'
