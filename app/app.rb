@@ -45,11 +45,13 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/users' do
+    # p params
     # we just inialize the object
     # without saving it. It may be invalid
     @user = User.new(email: params[:email],
                 password: params[:password],
                 password_confirmation: params[:password_confirmation])
+                # p @user.password
     if @user.save #save returns true/false depending on whether the model is successfully saved to the database.
     # the user.id will be nil if the user wasn't saved
     # because of password mismatch

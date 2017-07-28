@@ -8,7 +8,7 @@ class User
   include DataMapper::Resource
 
   property :id, Serial
-  property :email, String
+  property :email, String, format: :email_address, required: true
   # this will store both the password and the salt
   # It's Text and not String because String holds
   # only 50 characters by default
@@ -30,8 +30,12 @@ class User
   # http://datamapper.org/docs/validations.html
   validates_confirmation_of :password
 
+  # validates_format_of :email, as: :email_address - used alternative
+  # syntax, at 11 format: :email_address
+
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)
   end
+
 end
